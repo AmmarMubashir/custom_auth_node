@@ -128,7 +128,7 @@ app.post("/api/forgot-password", async (req, res) => {
     `;
 
     await transporter.sendMail({
-      from: `"{YOUR_WEBSITE_NAME} Support" <${process.env.EMAIL_USER}>`, // sender email must match Gmail account
+      from: `"{YOUR_WEBSITE_NAME} Support" <${process.env.EMAIL_USER}>`, // sender email must match Gmail account.
       to: email,
       replyTo: process.env.EMAIL_USER,
       subject: "Reset Your Password - {YOUR_WEBSITE_NAME}",
