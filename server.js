@@ -87,7 +87,7 @@ app.post("/api/forgot-password", async (req, res) => {
     user.resetTokenExpiration = Date.now() + 15 * 60 * 1000;
     await user.save();
 
-    // const resetLink = `YOUR_FRONTEND_URL/resetpasswordpage.html?token=${token}`; // Update this to your frontend URL (this is for production).
+    // const resetLink = `YOUR_FRONTEND_URL/resetpasswordpage.html?token=${token}`; // Update this to your frontend URL (this is for production)
     const resetLink = `YOUR_LOCALHOST_URL/resetpasswordpage.html?token=${token}`; // Update this to your frontend URL (this is for local host)
 
     const transporter = nodemailer.createTransport({
